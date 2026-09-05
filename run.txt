@@ -1,0 +1,30 @@
+====================================================
+  Multi-LLM Orchestration Platform — Run Commands
+====================================================
+
+IMPORTANT: Use "python -m" prefix to avoid PATH issues on Windows.
+
+----------------------------------------------------
+TERMINAL 1 — Backend (FastAPI + Uvicorn)
+----------------------------------------------------
+cd backend
+python -m uvicorn main:app --reload --port 8000
+
+Backend runs at: http://localhost:8000
+API Docs at:     http://localhost:8000/docs
+
+----------------------------------------------------
+TERMINAL 2 — Frontend (Streamlit)
+----------------------------------------------------
+cd frontend
+python -m streamlit run app.py
+
+Frontend runs at: http://localhost:8501
+
+----------------------------------------------------
+NOTES
+----------------------------------------------------
+- Start the BACKEND first, then the frontend.
+- Make sure your .env file is set up (see .env.example).
+- Both terminals must stay open while running.
+====================================================
